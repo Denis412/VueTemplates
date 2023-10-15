@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { mount } from '@vue/test-utils';
-import HelloWorld from '../components/HelloWorld.vue';
+import HelloWorld from './HelloWorld.vue';
 
 describe('HelloWorld component', () => {
     const wrapper = mount(HelloWorld);
