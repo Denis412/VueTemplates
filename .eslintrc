@@ -13,14 +13,111 @@
         "prettier"
     ],
     "plugins": ["@typescript-eslint", "prettier", "vue"],
-    // "overrides": [
-    //     {
-    //         "files": ["*.vue"],
-    //         "rules": {
-    //             "vue/no-reserved-component-names": "warn"
-    //         }
-    //     }
-    // ],
+    "overrides": [
+        {
+            "files": ["./src/shared/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            "@app*",
+                            "@processes*",
+                            "@layouts*",
+                            "@pages*",
+                            "@widgets*",
+                            "@features*",
+                            "@entities*"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/entities/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            "@app*",
+                            "@processes*",
+                            "@layouts*",
+                            "@pages*",
+                            "@widgets*",
+                            "@features*"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/features/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            "@app*",
+                            "@processes*",
+                            "@layouts*",
+                            "@pages*",
+                            "@widgets*"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/widgets/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            "@app*",
+                            "@processes*",
+                            "@layouts*",
+                            "@pages*"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/pages/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": ["@app*", "@processes*", "@layouts*"]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/layouts/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": ["@app*", "@processes*"]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["./src/processes/**/*"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": ["@app*"]
+                    }
+                ]
+            }
+        }
+    ],
     "rules": {
         "prettier/prettier": [
             "error",
